@@ -1,0 +1,598 @@
+/*  COLORS :   1) #FF3D00 - accent color
+               2) #f9EEDB - background color */
+
+/* FONT : font-family: 'Lato', sans-serif; */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FF3D00;
+    height: 100%;
+    width: 100%;
+}
+
+#Cart {
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    background-color: green;
+    border: none;
+    border-radius: 9px;
+    color: white;
+    padding: 20px 25px;
+    position: sticky;
+    top: 35px;
+    left: 1300px;
+    text-decoration: none;
+    z-index: 10;
+    animation: glow 3s linear infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 8px 8px 10px #f9EEDB ;
+    }
+
+    to {
+        box-shadow: 8px 8px 10px rgb(0, 255, 98) ;
+    }
+}
+
+header {
+    background-color: #f9EEDB;
+    height: 100vh;
+    overflow-y: auto;
+    width: 96%;
+    margin: 0% 2%;
+    border-radius: 0px 27px 0px 27px;
+    transform: skewX(3deg);
+}
+
+/*--------------------------------------------- navigation section */
+
+nav {
+    height: 12%;
+    width: 90%;
+    border-bottom: 2px solid rgb(247, 213, 213);
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+
+.logo {
+    /* border: 2px solid green; */
+    width: 10%;
+    margin: 1.5% 1%;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+
+.locationbox {
+    /* border: 2px solid blue; */
+    width: 60%;
+    margin: 1% 1%;
+    text-align: center;
+}
+
+.locationbox h3 {
+    font-size: 1.5rem;
+    /* font-family: 'Lato', sans-serif; */
+    margin: 12px 6px;
+    display: inline;
+    font-weight: lighter;
+}
+
+.locationbox input {
+    width: 70%;
+    height: 50%;
+    margin: 15px 6px;
+    background-color: #f9EEDB;
+    border: none;
+    outline: none;
+    padding: 2px 10px;
+    border-bottom: 2px solid black;
+    font-size: 1rem;
+}
+
+.login {
+    /* border: 2px solid pink; */
+    width: 15%;
+    margin: 1.9% 1%;
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    transform: skew(-3deg);
+}
+
+.login h3 {
+    display: inline;
+    margin-right: 4px;
+}
+
+.login i:hover {
+    color: #FF3D00;
+}
+
+/* -----------------------------------------------------Home Page */
+
+.search {
+    /* border: 2px solid black; */
+    margin: 5%;
+    transform: skew(-3deg);
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #999;
+}
+
+
+.search i {
+    position: relative;
+    /* top: 0px ; */
+    font-size: 1.3rem;
+    left: 35px;
+}
+
+.search input {
+    width: 70%;
+    height: 50%;
+    background-color: #ffffff;
+    padding: 10px 50px;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 11px;
+
+}
+
+.live-container {
+    /* border: 2px solid black; */
+    height: 50%;
+    padding: 15px 10px;
+    transform: skew(-3deg);
+    margin: 0px 15px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.live {
+    position: relative;
+    height: 70%;
+    width: 30%;
+    border-radius: 9px;
+    overflow: hidden;
+    z-index: -1;
+    animation: moveUp 12s linear infinite;
+    transform: translateY(0);
+}
+
+@keyframes moveUp {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: .5;
+    }
+
+    16.66%,
+    33.33% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+
+    50%,
+    66.66% {
+        transform: translateY(0);
+        opacity: .5;
+    }
+}
+
+.live:nth-child(1) {
+    animation-delay: 0s;
+    background: url('https://images-eu.ssl-images-amazon.com/images/G/31/img23/Grocery/COOP/March/Dabur_750x375.jpg') no-repeat center center/cover;
+}
+
+.live:nth-child(2) {
+    animation-delay: 4s;
+    background: url('https://images-eu.ssl-images-amazon.com/images/G/31/img23/Grocery/COOP/May/Cadbury_750x375.jpg') no-repeat center center/cover;
+}
+
+.live:nth-child(3) {
+    animation-delay: 8s;
+    background: url('https://images-eu.ssl-images-amazon.com/images/G/31/img23/Grocery/COOP/June/TGL_750X375.jpg') no-repeat center center/cover;
+}
+
+/* ----------------------------------------------cateogory section */
+
+.cateogory {
+    height: 100vh;
+    background-color: #f9EEDB;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 96%;
+    margin: 4% 2%;
+    border-radius: 27px 0px 27px 0px;
+    transform: skewX(-3deg);
+    overflow: hidden;
+}
+
+.cateogory h1 {
+    color: #ffffff;
+    font-family: sans-serif;
+    position: relative;
+    font-size: 10rem;
+    left: 20px;
+    text-shadow: 2vh 1vw 2px #FF3D00;
+
+}
+
+.container {
+    height: 60%;
+    width: 96%;
+    margin: 3% 2%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1% 2%;
+}
+
+.container .item {
+    height: 180px;
+    width: 200px;
+    /* border: 2px solid black; */
+    border-radius: 7px;
+    transition: all .2s ease-in;
+}
+
+.container .item:hover {
+    transform: scale(1.1);
+}
+
+.item::after{
+    content: "";
+    position: absolute;
+    opacity: .9;
+    width: 200px;
+    height: 0px;
+    background-color: #FF3D00;
+    transition: all .2s linear;
+}
+
+.item:hover::after{
+    height: 120px;
+}
+
+.item h3 {
+    z-index: 5;
+    color: white;
+    width: 100%;
+    height: 0;
+    position: relative;
+    top: 30%;
+    text-align: center;
+    opacity: .9;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+
+.cateogory h2 {
+    position: relative;
+    color: #666;
+    left: 84%;
+    bottom: 7%;
+}
+
+.cateogory h2:hover {
+    color: #FF3D00;
+    cursor: pointer;
+}
+
+.container #item1 {
+    background: url('https://images.unsplash.com/photo-1675850412834-48d406410728?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80') no-repeat center center/cover;
+}
+
+.container #item2 {
+    background: url('https://images.unsplash.com/photo-1610492219815-f76905e3f084?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJ1aXQlMjBhbmQlMjB2ZWdldGFibGVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+}
+
+.container #item3 {
+    background: url('https://images.unsplash.com/photo-1626201339405-e3912075c1d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fGJldmVyYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+}
+
+.container #item4 {
+    background: url('https://images.unsplash.com/photo-1621939514649-280e2ee25f60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c25hY2tzJTIwYW5kJTIwbXVubmNoaWVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+}
+
+.container #item5 {
+    background: url('https://images.unsplash.com/photo-1627735483792-233bf632619b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGZsb3VyJTIwYW5kJTIwcmljZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+}
+
+.container #item6 {
+    background: url('https://images.unsplash.com/photo-1577401132921-cb39bb0adcff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBoYXJtYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+}
+
+.container #item7 {
+    background: url('https://images.unsplash.com/photo-1577639411516-75b4bdc726ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFja2VyeSUyMGFuZCUyMGJ1aXNjdWl0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+}
+
+.container #item8 {
+    background: url('https://images.unsplash.com/photo-1448907503123-67254d59ca4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyQ21lYXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+}
+
+.container #item9 {
+    background: url('https://images.unsplash.com/photo-1606914469725-e398d2f1d7ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNwaWNlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+}
+
+.container #item10 {
+    background: url('https://images.unsplash.com/photo-1613731587985-ea81ea4b3bdc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fGJhYnklMjBjYXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+}
+
+.container #item11 {
+    background: url('https://images.unsplash.com/photo-1618411640018-972400a01458?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3dlZXQlMjB0b290aHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+}
+
+.container #item12 {
+    background: url('https://images.unsplash.com/photo-1597843786271-1027c561c6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHBldCUyMGNhcmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+}
+
+
+/* ----------------------------------------------------offers section */
+
+.offer {
+    border: 3px solid white;
+    height: 50vh;
+    width: 96%;
+    margin: 8% 2%;
+    border-radius: 0px 27px 0px 27px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+.offer .box {
+    display: inline-block;
+    height: 70%;
+    width: 30%;
+    margin: 4% 2%;
+    overflow: hidden;
+    /* border: 3px solid green; */
+    border-radius: 16px;
+    animation: moveright 10s linear infinite alternate;
+
+}
+
+@keyframes moveright {
+    form {
+        transform: translateX(10%);
+    }
+
+    to {
+        transform: translateX(-240%)
+    }
+}
+
+.offer::-webkit-scrollbar {
+    display: none;
+}
+
+.offer #box1 {
+    background: url('https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=450/layout-engine/2023-08/Web-HFS-banner_0.png') no-repeat center center/cover;
+}
+
+.offer #box2 {
+    background: url('https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=450/layout-engine/2023-03/beauty-WEB.jpg') no-repeat center center/cover;
+}
+
+.offer #box3 {
+    background: url('https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=450/layout-engine/2023-07/electronics-WEB.jpg') no-repeat center center/cover;
+}
+
+.offer #box4 {
+    background: url('https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=450/layout-engine/2023-07/pharmacy-WEB.jpg') no-repeat center center/cover;
+}
+
+.offer #box5 {
+    background: url('https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=450/layout-engine/2023-07/Pet-Care_WEB.jpg') no-repeat center center/cover;
+}
+
+/* ----------------------------------------------------partners */
+
+.partners {
+    /* border: 3px solid black; */
+    height: 50vh;
+    width: 100%;
+    background: url('https://www.justadrop.co.uk/wp-content/uploads/2017/01/big-brands-blog-fb.jpg');
+    object-fit: cover;
+    background-attachment: fixed;
+}
+
+
+/* ------------------------------------------------------random-items */
+
+.random-items {
+    height: 300vh;
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+    width: 96%;
+    margin: 4% 2%;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.random-items .ritem {
+    height: 350px;
+    width: 250px;
+    border: 2px solid white;
+    margin: 10px;
+    border-radius: 0px 27px 0px 27px;
+    background-color: #f9EEDB;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 8px 8px 7px #c0c0c0;
+
+}
+
+.ritem .img {
+    height: 59%;
+    width: 100%;
+    background-color: white;
+    object-fit: cover;
+    background-position: center;
+}
+
+.ritem .info {
+    height: 41%;
+    width: 100%;
+}
+
+.info .btn {
+    z-index: 1;
+    position: relative;
+    padding: 6px 15px;
+    font-size: 1.3rem;
+    background-color: greenyellow;
+    border-radius: 9px;
+    border: none;
+    top: 80px;
+    left: 160px;
+    box-shadow: 8px 8px 8px #c0c0c0;
+}
+
+.info .sub-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: black;
+    /* border: 2px solid purple; */
+    bottom: 35px;
+    width: 247px;
+    height: 130px;
+    padding: 2px 25px;
+    font-family: 'Lato', sans-serif;
+}
+
+.sub-info h2 {
+    font-size: 1rem;
+    display: inline-block;
+
+}
+
+.sub-info h3 {
+    font-size: .8rem;
+    font-weight: lighter;
+    display: inline-block;
+}
+
+.sub-info span {
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+/* ------------------------------------------------------contacts section */
+
+.contact {
+    height: 60vh;
+    background-color: #f9EEDB;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 96%;
+    margin: 4% 2%;
+    border-radius: 27px 0px 27px 0px;
+    transform: skewX(-3deg);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.contact .left {
+    height: 80%;
+    width: 30%;
+    /* border: 2px solid blue; */
+}
+
+.contact .infobox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 20px;
+
+}
+
+.infobox h2 {
+    font-size: 1.5rem;
+}
+
+.infobox .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.infobox .info a {
+    text-decoration: none;
+    color: #333;
+    margin: 5px;
+}
+
+.infobox .info a:hover {
+    color: #FF3D00;
+}
+
+.contact .right {
+    /* border: 2px solid green; */
+    height: 80%;
+    width: 60%;
+}
+
+.contact .icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid purple; */
+    height: 10%;
+    width: 20%;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.icons i {
+    font-size: 2.2rem;
+    transition: all .3s ease-in;
+}
+
+.icons i:hover {
+    color: #FF3D00;
+    transform: translateY(-10px);
+}
+
+/* -----------------------------------------------------footer section */
+
+footer {
+    width: 100%;
+    height: 3vh;
+    color: white;
+    text-align: center;
+
+}
